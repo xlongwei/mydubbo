@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	
+	<dubbo:service ref="idService" interface="com.xlongwei.archetypes.dubbo.facade.IdService" />
+	<dubbo:service ref="userService" interface="com.xlongwei.archetypes.dubbo.facade.UserService" />
+	<dubbo:service ref="tongjiService" interface="com.xlongwei.archetypes.dubbo.facade.TongjiService" />
+	
+	<dubbo:service ref="userRepository" interface="com.xlongwei.archetypes.dubbo.repository.UserRepository" />
+	<dubbo:service ref="roleRepository" interface="com.xlongwei.archetypes.dubbo.repository.RoleRepository" />
+	<dubbo:service ref="permissionRepository" interface="com.xlongwei.archetypes.dubbo.repository.PermissionRepository" />
+	<dubbo:service ref="tongjiRepository" interface="com.xlongwei.archetypes.dubbo.repository.TongjiRepository" />
+</beans>
